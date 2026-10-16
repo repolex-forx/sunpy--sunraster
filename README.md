@@ -1,1 +1,135 @@
-Initializing
+# Repolex Knowledge Graph of sunpy/sunraster
+
+RDF knowledge graph data for [sunpy/sunraster](https://github.com/sunpy/sunraster), parsed by [repolex](https://repolex.ai).
+
+> **Note**: This data is experimental and subject to change without notice.
+
+## How to use this data
+
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
+
+```bash
+cargo install --git https://github.com/repolex-ai/rlex
+```
+
+Verify the install:
+
+```bash
+rlex --help
+```
+
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
+
+To load this repo's data:
+
+```bash
+rlex download sunpy/sunraster
+```
+
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
+
+## Data structure
+
+All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) (`.nq.gz`), a standard RDF format that can be loaded into any triplestore or graph database.
+
+```
+.
+├── aggregate
+│   ├── ast
+│   │   └── 3a1880629447b6b6bf4a3b5e3620426b3ba77616
+│   │       └── chunk-001.nq.gz
+│   └── repolex
+│       └── 3a1880629447b6b6bf4a3b5e3620426b3ba77616
+│           └── chunk-001.nq.gz
+├── blob
+│   ├── 042a14edc8b181b004853f273371c3576c37ff22.nq.gz
+│   ├── 05fd1f097e5b1451b11d3325f1e72bc5abb77d1f.nq.gz
+│   ├── 2119f51099bf37e4fdb6071dce9f451ea44c62dd.nq.gz
+│   ├── 2308131c5500db76760da80b262fd638a17dd9fa.nq.gz
+│   ├── 27674f3ad3e9ddd6913e52ca3010c8e48de1060e.nq.gz
+│   ├── 27a99baee6e0ea78fef2636295896cf14d2925a1.nq.gz
+│   ├── 2d1b0d25e02d0d4e785e72eab9b386444eebaedf.nq.gz
+│   ├── 31090474e925940079066ac17d1cf59a136d6b7f.nq.gz
+│   ├── 382f6e7693a2a0f3d078984f7e227a8757462a84.nq.gz
+│   ├── 3c6c6d95d020e4103dd4096796bc8e0055cb7ec3.nq.gz
+│   ├── 49f09e7e37f90caaa1d9d4cb5f24cdd31865665e.nq.gz
+│   ├── 4bb8346d95834ce0d7955e7b941879873e870cce.nq.gz
+│   ├── 4c6ca101eb2579c95d41ed6c46fa5b36f10ca357.nq.gz
+│   ├── 4ff73193eee7f368783c497ff0c95e10a45c2515.nq.gz
+│   ├── 509b80448c98091d4be648ea9f0b4a1d7b712fcf.nq.gz
+│   ├── 52b0a9245b5da378b336a5f88fb033cc2e05214f.nq.gz
+│   ├── 544a2dba78d51ed662a71e941aac2b984933725b.nq.gz
+│   ├── 5ac645cbb20885ad9733ec4c1211838e5df97596.nq.gz
+│   ├── 5c4cc1aaf544c7b464dcd8dbf3ebf64ec57937c2.nq.gz
+│   ├── 624e6d0d997b4ddcc6ea31164b567c453bcc232f.nq.gz
+│   ├── 6252c48fc0e94c54bc4832a1de94002b5c5381e1.nq.gz
+│   ├── 651c63fedee0586f74bd26042efaa3b2736b3161.nq.gz
+│   ├── 67b82f693f53cef785f9750c2c65c0bc3c191c8b.nq.gz
+│   ├── 738149331af59007a00c82c727b2c26b01aa11f1.nq.gz
+│   ├── 73d4825a9d450471fdcb8779a44345ad26e21c4c.nq.gz
+│   ├── 77b4725b988bb91d060c9582497e54affe698c02.nq.gz
+│   ├── 77e3cb1b64dab1bbf668d7bc5db66e00a8c40640.nq.gz
+│   ├── 79183a10f68f0e9358958edd409f6a158a741e54.nq.gz
+│   ├── 851b696b2e71ebab71767782a654dc730442e8bd.nq.gz
+│   ├── 89d4dd8a3ba6313e95500048da00594ac66f05c2.nq.gz
+│   ├── 8fcd3990bbb17a8aa989df41f20490f53dfb3e0c.nq.gz
+│   ├── 8fe09b731963a1272a62a3360bbf019ea563aef2.nq.gz
+│   ├── 93b82744bbec9887b410effe97a43438360ef82d.nq.gz
+│   ├── 9a6570084528c7c29a58a654a917e14154031992.nq.gz
+│   ├── a3678c42ba4e535aa6fe8a762603275a4319378c.nq.gz
+│   ├── a91ab9eec75e58e56328872c3fe2b62152bda2ed.nq.gz
+│   ├── a94b5bd458c0276e9546ecfe86ad38693ec3d317.nq.gz
+│   ├── b21303aec4000d07e6f2574d3f73f34e058d3ebd.nq.gz
+│   ├── b66a0740e1ecc20b4121be469509704a3a06a636.nq.gz
+│   ├── b91f2c26bfb6a9af70ac9183a4efb4389eb5222c.nq.gz
+│   ├── c493bf639293ff1a4625f5f1ac78ae2e23d0ed47.nq.gz
+│   ├── c6095b01b0ace9a21e9f1cac7acfa241c69091e7.nq.gz
+│   ├── c82334553632d12caf96bd3d3d332d9683d2635c.nq.gz
+│   ├── cbd8326df4f06f9cbc7d26c73ce21c68e54759ea.nq.gz
+│   ├── ccb336a8067cd47f07a50ba24c8e6bcabe69be38.nq.gz
+│   ├── d4bb2cbb9eddb1bb1b4f366623044af8e4830919.nq.gz
+│   ├── d5305ed402b328bcdf46d2b8c61edc67a517c564.nq.gz
+│   ├── d705134a995b08e6b52e8f599e05c191558351d0.nq.gz
+│   ├── dbfc4fb78177f32a96d0bb27ea37e538805c6c5b.nq.gz
+│   ├── e29eb2d9ef3fce4d0da9ffc152473ee33a4686fb.nq.gz
+│   ├── e38b3a8dc183cbe2b71aedbaf793b8192981ce43.nq.gz
+│   ├── e48fcd200e0320bd3420895b2c9f4b5bc5231633.nq.gz
+│   ├── e69de29bb2d1d6434b8b29ae775ad8c2e48c5391.nq.gz
+│   ├── e99b66e22230309c122d0b133bd9a7f99c1bb675.nq.gz
+│   ├── ef0c538e5387283146dbf5ca8c9042e2f595d437.nq.gz
+│   └── f9f9e5e19b32e0c1b01fa3cae4644408f92afccb.nq.gz
+├── branch
+│   └── branch.nq.gz
+├── commit
+│   └── commit.nq.gz
+├── filetree
+│   └── 3a1880629447b6b6bf4a3b5e3620426b3ba77616.nq.gz
+├── issue
+│   └── issue.nq.gz
+├── pr
+│   └── pr.nq.gz
+└── tag
+    └── tag.nq.gz
+
+13 directories, 64 files
+```
+
+| Directory | What it contains |
+|-----------|-----------------|
+| `blob/` | Per-file AST graphs, content-addressed by git blob SHA. Each file in the source repo gets its own graph. |
+| `aggregate/ast/` | Combined AST graph per parsed commit. Merges all blob graphs for a snapshot of the entire codebase at that point. |
+| `aggregate/lsp/` | Language Server Protocol enrichment: resolved symbols, definitions, references, and type information. |
+| `aggregate/dataflow/` | Interprocedural data flow edges between functions and modules. |
+| `aggregate/repolex/` | Combined graph (AST + LSP + dataflow) per commit. |
+| `commit/` | Git commit metadata (author, date, message, parent links). |
+| `branch/` | Branch metadata. |
+| `tag/` | Tag metadata. |
+| `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
+
+## Source repository
+
+[sunpy/sunraster](https://github.com/sunpy/sunraster)
+
+---
+*Parsed on 2026-10-16 by [repolex](https://repolex.ai)*
